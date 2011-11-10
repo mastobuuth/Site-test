@@ -1,0 +1,14 @@
+
+FILE: /home/www/site1/index.php
+--------------------------------------------------------------------------------
+FOUND 3 ERROR(S) AND 2 WARNING(S) AFFECTING 5 LINE(S)
+--------------------------------------------------------------------------------
+ 2 | ERROR   | Spaces must be used to indent lines; tabs are not allowed
+ 3 | WARNING | Consider putting global function "time1" in a static class
+ 5 | ERROR   | Spaces must be used to indent lines; tabs are not allowed
+ 7 | WARNING | Consider putting global function "time2" in a static class
+ 9 | ERROR   | Spaces must be used to indent lines; tabs are not allowed
+--------------------------------------------------------------------------------
+
+Time: 0 seconds, Memory: 1.75Mb
+
