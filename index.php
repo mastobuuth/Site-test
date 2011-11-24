@@ -2,6 +2,7 @@
 /*
  * Fils de ta grosse mémère !
  */
+ /*
 function time1 ()
 {
     sleep(5);
@@ -10,6 +11,7 @@ function time2 ()
 {
     sleep(3);
 }
+*/
 Class JeNiqueSaMereSiLEstBonne()
 {
     private $trou1;
@@ -28,17 +30,24 @@ Class JeNiqueSaMereSiLEstBonne()
         sleep($nb);
         return TRUE;
     }
+    public function getAlert($msg)
+    {
+        $alert  = '<script type="text/javascript>' . PHP_EOL;
+        $alert .= 'alert("' . $msg . '")' . PHP_EOL;
+        $alert .= '</script>' . PHP_EOL;
+    }
 }
-$jnsmsleb = new JeNiqueSaMereSiLEstBonne(5, 3);
-$jnsmsleb->getTime1();
-$jnsmsleb->getAlert('Est tu sûr qu\'elle soit si moche que ça ?');
-$jnsmsleb->getTime2();
+$jnsmsleb = new JeNiqueSaMereSiLEstBonne();
+$jnsmsleb->getTime(5);
+$jnsmsleb->getAlert('Es-tu sûr qu\'elle soit si moche que ça ?');
+$jnsmsleb->getTime(3);
 $jnsmsleb->getAlert('je te crois sur parole...');
 $jnsmsleb->getAlert('Et j\'en aurai fini, ceci a été codé très rapidement ;), on peut croire que je me la pete mais vraiment c\est à amélirer');
 
-
+/*
 time1();
 time2();
+*/
 echo'Saaaallllllooooope!<br />' . PHP_EOL;
 echo 'IL NE FAUT PAS PARLER COMME CA MEME SI TU AS UNE VIE DE MERDE, ET JE SAIS DE QUOI ON PARLE !<br />' . PHP_EOL;
 echo 'Avec tous le respect que je te dois. <br />' . PHP_EOL;
