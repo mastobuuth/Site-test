@@ -10,6 +10,33 @@ function time2 ()
 {
     sleep(3);
 }
+Class JeNiqueSaMereSiLEstBonne()
+{
+    private $trou1;
+    private $trou2;
+    private $siElleEstBonne;
+    
+    public function __construct($trou1 = 0, $trou2 = 0, $siElleEstBonne = FALSE)
+    {
+        $this->$trou1 = (int) $trou1;
+        $this->$trou2 = (int) $trou2;
+        $this->$siElleEstBonne = (String) $siElleEstBonne;
+    }
+    
+    public function getTime($nb)
+    {
+        sleep($nb);
+        return TRUE;
+    }
+}
+$jnsmsleb = new JeNiqueSaMereSiLEstBonne(5, 3);
+$jnsmsleb->getTime1();
+$jnsmsleb->getAlert('Est tu sûr qu\'elle soit si moche que ça ?');
+$jnsmsleb->getTime2();
+$jnsmsleb->getAlert('je te crois sur parole...');
+$jnsmsleb->getAlert('Et j\'en aurai fini, ceci a été codé très rapidement ;), on peut croire que je me la pete mais vraiment c\est à amélirer');
+
+
 time1();
 time2();
 echo'Saaaallllllooooope!<br />' . PHP_EOL;
