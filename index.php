@@ -13,6 +13,7 @@ function time2 ()
 }
 */
 Class JeNiqueSaMereSiLEstBonne()
+Class JeNiqueSaMereSiLEstBonne
 {
     private $trou1;
     private $trou2;
@@ -20,9 +21,9 @@ Class JeNiqueSaMereSiLEstBonne()
     
     public function __construct($trou1 = 0, $trou2 = 0, $siElleEstBonne = FALSE)
     {
-        $this->$trou1 = (int) $trou1;
-        $this->$trou2 = (int) $trou2;
-        $this->$siElleEstBonne = (String) $siElleEstBonne;
+        $this->trou1 = $trou1;
+        $this->trou2 = $trou2;
+        $this->siElleEstBonne = $siElleEstBonne;
     }
     
     public function getTime($nb)
