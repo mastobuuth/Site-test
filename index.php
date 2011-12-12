@@ -48,6 +48,7 @@ $jnsmsleb->getAlert('Et j\'en aurai fini, ceci a été codé très rapidement ;)
 time1();
 time2();
 */
+
 echo'Saaaallllllooooope!<br />' . PHP_EOL;
 echo 'IL NE FAUT PAS PARLER COMME CA MEME SI TU AS UNE VIE DE MERDE, ET JE SAIS DE QUOI ON PARLE !<br />' . PHP_EOL;
 echo 'Avec tous le respect que je te dois. <br />' . PHP_EOL;
