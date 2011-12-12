@@ -12,7 +12,6 @@ function time2 ()
     sleep(3);
 }
 */
-Class JeNiqueSaMereSiLEstBonne()
 Class JeNiqueSaMereSiLEstBonne
 {
     private $trou1;
