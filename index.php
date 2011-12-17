@@ -134,7 +134,7 @@ echo '<body>' . PHP_EOL;
         echo '</div>' . PHP_EOL;
         echo '<div id="div_nom">' . PHP_EOL;
             echo '<h1>SITE 1</h1>' . PHP_EOL;
-            echo '<p id="p_site_slogan">DEV-LYON  2&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;IP-FORMATION</p>' . PHP_EOL;
+            echo '<p id="p_site_slogan">Masto&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;DEV-LYON  2&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;IP-FORMATION</p>' . PHP_EOL;
             include 'includes/navigation.php';
         echo '</div>' . PHP_EOL;
         
