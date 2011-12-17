@@ -1,6 +1,6 @@
 <?php
 /*
- * Fils de ta grosse mémère !
+ * Fils de ta grosse mÃ©mÃ¨re !
  */
  /*
 function time1 ()
@@ -12,6 +12,28 @@ function time2 ()
     sleep(3);
 }
 */
+echo $_SERVER['PHP_SELF'];
+//if ($_GET['lang'] > ' ') {
+//    echo $_get['lang'];
+//}
+if (isset($_GET['lang'])) {
+    if ($_GET['lang'] == 'jp') {
+        $lang = 'jp';
+        $masto = 'トーマス';
+    } else if ($_GET['lang'] == 'fr') {
+        $lang = 'fr';
+        $masto = 'MASTO';
+    } else {
+        $lang = '';
+    }
+    define('MASTO', $masto);
+    define('MYLANG', $lang);
+}
+if (isset($_GET['page']) && $_GET['page'] > ' ') {
+    $page = '&page=' . htmlentities($_GET['page']);
+} else {
+    $page = '';
+}
 Class JeNiqueSaMereSiLEstBonne
 {
     private $trou1;
@@ -40,8 +62,8 @@ Class JeNiqueSaMereSiLEstBonne
 echo '<!DOCTYPE html>' . PHP_EOL;
 echo '<html>' . PHP_EOL;
 echo '<head>' . PHP_EOL;
-    echo '<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />' . PHP_EOL;
-    echo '<title>MASTO | SITE 1</title>' . PHP_EOL;
+    echo '<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />' . PHP_EOL;
+    echo '<title>' . $masto . ' | SITE 1</title>' . PHP_EOL;
     
     echo '<style type="text/css">' . PHP_EOL;
     ?>
@@ -128,13 +150,18 @@ echo '</head>' . PHP_EOL;
 echo '<body>' . PHP_EOL;
     
     echo '<div id="header">' . PHP_EOL;
+        echo '<div id="div_lang">' . PHP_EOL;
+            echo '<a href="index.php?lang=fr' . $page . '"><img src="img/fr.png" alt="langue fr" /></a>' . PHP_EOL;
+            echo ' - ' . PHP_EOL;
+            echo '<a href="index.php?lang=jp' . $page . '"><img src="img/jp.png" alt="langue jp" /></a>' . PHP_EOL;
+        echo '</div>' . PHP_EOL;
         echo '<div id="header_content">' . PHP_EOL;
         echo '<div id="div_logo">' . PHP_EOL;
             echo '<img src="img/xcode.png" alt="logo" />' . PHP_EOL;
         echo '</div>' . PHP_EOL;
         echo '<div id="div_nom">' . PHP_EOL;
             echo '<h1>SITE 1</h1>' . PHP_EOL;
-            echo '<p id="p_site_slogan">Masto&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;DEV-LYON  2&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;IP-FORMATION</p>' . PHP_EOL;
+            echo '<p id="p_site_slogan">' . MASTO . '&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;DEV-LYON  2&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;IP-FORMATION</p>' . PHP_EOL;
             include 'includes/navigation.php';
         echo '</div>' . PHP_EOL;
         
