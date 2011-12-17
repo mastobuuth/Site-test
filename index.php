@@ -41,7 +41,7 @@ echo '<!DOCTYPE html>' . PHP_EOL;
 echo '<html>' . PHP_EOL;
 echo '<head>' . PHP_EOL;
     echo '<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />' . PHP_EOL;
-    echo '<title>DEBIAN | SITE 1</title>' . PHP_EOL;
+    echo '<title>MASTO | SITE 1</title>' . PHP_EOL;
     
     echo '<style type="text/css">' . PHP_EOL;
     ?>
