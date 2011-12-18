@@ -12,7 +12,6 @@ function time2 ()
     sleep(3);
 }
 */
-echo $_SERVER['PHP_SELF'];
 //if ($_GET['lang'] > ' ') {
 //    echo $_get['lang'];
 //}
@@ -20,9 +19,11 @@ if (isset($_GET['lang'])) {
     if ($_GET['lang'] == 'jp') {
         $lang = 'jp';
         $masto = 'トーマス';
+        $siteName = 'サイト1';
     } else if ($_GET['lang'] == 'fr') {
         $lang = 'fr';
         $masto = 'MASTO';
+        $siteName = 'SITE 1';
     } else {
         $lang = '';
     }
@@ -63,7 +64,7 @@ echo '<!DOCTYPE html>' . PHP_EOL;
 echo '<html>' . PHP_EOL;
 echo '<head>' . PHP_EOL;
     echo '<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />' . PHP_EOL;
-    echo '<title>' . $masto . ' | SITE 1</title>' . PHP_EOL;
+    echo '<title>' . $masto . ' | ' . $siteName . '</title>' . PHP_EOL;
     
     echo '<style type="text/css">' . PHP_EOL;
     ?>
@@ -160,7 +161,7 @@ echo '<body>' . PHP_EOL;
             echo '<img src="img/xcode.png" alt="logo" />' . PHP_EOL;
         echo '</div>' . PHP_EOL;
         echo '<div id="div_nom">' . PHP_EOL;
-            echo '<h1>SITE 1</h1>' . PHP_EOL;
+            echo '<h1>' . $siteName . '</h1>' . PHP_EOL;
             echo '<p id="p_site_slogan">' . MASTO . '&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;DEV-LYON  2&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;IP-FORMATION</p>' . PHP_EOL;
             include 'includes/navigation.php';
         echo '</div>' . PHP_EOL;
